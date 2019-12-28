@@ -8,7 +8,7 @@ abstract class OmiseException implements Exception {
 
 /// Invalid request errors arise when your request has invalid parameters.
 class InvalidRequestException extends OmiseException {
-  InvalidRequestException(String code, String message) : super(code ,message);
+  InvalidRequestException(String code, String message) : super(code, message);
 
   @override
   String toString() => 'Invalid request: $code: $message.';
