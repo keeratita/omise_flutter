@@ -1,0 +1,4 @@
+name: YOUR_PROJECT_NAME
+
+dependencies:
+  omise_flutter: 0.0.1
