@@ -1,3 +1,9 @@
-## [0.0.1] - TODO: Add release date.
+## [0.1.0] - Update an example
 
-* TODO: Describe initial release.
+- Update an example
+- Update package
+- Format code
+
+## [0.0.1] - Initial release
+
+- Initial release
