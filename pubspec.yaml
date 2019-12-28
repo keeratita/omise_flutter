@@ -1,9 +1,8 @@
 name: omise_flutter
 description: A package for integrating Omise API
 version: 0.0.1
-author: Keerati Tansawatcharoen <keerati.tansawatcharoen@gmail.com>
-
 homepage: https://keerati.co
+repository: https://github.com/keeratita/omise_flutter
 
 environment:
   sdk: ">=2.1.0 <3.0.0"
