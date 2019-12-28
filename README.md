@@ -18,7 +18,7 @@ create(String name, String number, String expirationMonth,
       String phoneNumber})
 ```
 
-** Usage **
+**Usage**
 
 ```
 OmiseFlutter omise = OmiseFlutter(YOUR_PUBLIC_KEY);
@@ -40,7 +40,7 @@ create(int amount, String currency, String type,
       bool zeroInterestInstallments})
 ```
 
-** Usage **
+**Usage**
 
 ```
 OmiseFlutter omise = OmiseFlutter(YOUR_PUBLIC_KEY);
@@ -53,7 +53,7 @@ final response = await omise.source.create(10000, "thb", "internet_banking_bay")
 retrieve()
 ```
 
-** Usage **
+**Usage**
 
 ```
 OmiseFlutter omise = OmiseFlutter(YOUR_PUBLIC_KEY);
