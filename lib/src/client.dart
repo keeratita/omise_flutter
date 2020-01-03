@@ -6,10 +6,11 @@ import './exception.dart';
 class Client {
   final String _publicKey;
   final String _apiVersion;
+  String version;
 
   Client(this._publicKey, this._apiVersion);
 
-  http.Client httpClient;
+  http.Client httpClient = new http.Client();
 
   // Makes a post request
   Future<Map<String, dynamic>> post(String host, final List<String> path,
@@ -43,7 +44,8 @@ class Client {
       'Authorization': this.basicAuth(),
       'Omise-Version': _apiVersion,
       'Cache-Control': 'no-cache',
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
+      'user-agent': 'co.keerati.omise_flutter/$version'
     };
     return headers;
   }

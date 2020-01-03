@@ -1,6 +1,6 @@
 name: omise_flutter
 description: A package for integrating to Omise REST API. It targets only for a client-side usage to create a token, create a source and retrieve a capability of your account.
-version: 0.1.0
+version: 0.1.1
 homepage: https://keerati.co
 repository: https://github.com/keeratita/omise_flutter
 
