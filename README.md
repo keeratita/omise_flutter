@@ -1,8 +1,31 @@
 # omise_flutter
 
-A package for integrating Omise API
+A third-party Flutter package for integrating with Omise API
 
-## Getting Started
+## Installation
+
+More information: https://pub.dev/packages/omise_flutter
+
+1. Add this to your package's pubspec.yaml file:
+
+```
+dependencies:
+  omise_flutter: ^0.1.0
+```
+
+2. Install it from the command
+
+```
+flutter pub get
+```
+
+3. Import it
+
+```
+import 'package:omise_flutter/omise_flutter.dart';
+```
+
+## Usage
 
 ### Create a token
 
