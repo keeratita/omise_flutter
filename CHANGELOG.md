@@ -1,3 +1,7 @@
+## [0.1.2] - Update an example
+
+- Bug fixes
+
 ## [0.1.1] - Update an example
 
 - Bug fixes

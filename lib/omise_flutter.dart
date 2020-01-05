@@ -5,9 +5,7 @@ import './src/resources/source.dart';
 import './src/resources/capability.dart';
 import './src/client.dart';
 
-import 'package:yaml/yaml.dart';
-import 'dart:io';
-import 'package:path/path.dart';
+const String _VERSION = "0.1.2";
 
 /// OmiseFlutter
 class OmiseFlutter {
@@ -29,18 +27,9 @@ class OmiseFlutter {
 
   // Constructor
   OmiseFlutter(this.publicKey, [this.apiVersion = '2019-05-29']) {
-    // read package version
-    String pathToYaml =
-        join(dirname(Platform.script.toFilePath()), 'pubspec.yaml');
-
-    File f = new File(pathToYaml);
-    String yamlText = f.readAsStringSync();
-    Map yaml = loadYaml(yamlText);
-    String version = yaml['version'];
-
     //
     _client = new Client(publicKey, apiVersion);
-    _client.version = version;
+    _client.version = _VERSION;
     _initResources();
   }
 
