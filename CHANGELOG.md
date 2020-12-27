@@ -1,3 +1,7 @@
+## [0.1.3] - Update an example
+
+- Add timeout error
+
 ## [0.1.2] - Update an example
 
 - Bug fixes
