@@ -17,8 +17,11 @@ class Client {
       {final dynamic data}) async {
     final uri = createUri(host, path);
     final headers = createHeader();
-    final response =
-        await httpClient.post(uri, body: json.encode(data), headers: headers);
+    final response = await httpClient
+        .post(uri, body: json.encode(data), headers: headers)
+        .timeout(const Duration(seconds: 60), onTimeout: () {
+      throw TimeoutException('The connection has timed out, Please try again!');
+    });
     return processResponse(response);
   }
 
@@ -26,7 +29,11 @@ class Client {
   Future<Map<String, dynamic>> get(String host, final List<String> path) async {
     final uri = createUri(host, path);
     final headers = createHeader();
-    final response = await httpClient.get(uri, headers: headers);
+    final response = await httpClient
+        .get(uri, headers: headers)
+        .timeout(const Duration(seconds: 60), onTimeout: () {
+      throw TimeoutException('The connection has timed out, Please try again!');
+    });
     return processResponse(response);
   }
 
