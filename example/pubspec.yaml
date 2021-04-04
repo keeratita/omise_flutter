@@ -1,4 +1,5 @@
 name: YOUR_PROJECT_NAME
 
 dependencies:
-  omise_flutter: 0.1.3
+  omise_flutter:
+    path: ..

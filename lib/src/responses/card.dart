@@ -23,6 +23,8 @@ class Card {
   int expirationYear;
   String fingerprint;
   String name;
+  @Deprecated(
+      "This attribute is deprecated. Please check https://www.omise.co/cards-api")
   bool securityCodeCheck;
 
   Card(

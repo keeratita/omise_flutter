@@ -1,3 +1,10 @@
+## [0.1.4] - Minor update
+
+- Update an exmaple
+- Update packages
+- Deprecated a `security_code_check` attribute of Card API
+- Added a new attribute named `charge_status` of Token API
+
 ## [0.1.3] - Update an example
 
 - Add timeout error

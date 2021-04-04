@@ -5,6 +5,7 @@ class Token {
   String id;
   bool livemode;
   String location;
+  String chargeStatus;
   String createdAt;
   bool used;
   Card card;
@@ -23,6 +24,7 @@ class Token {
     id = json['id'];
     livemode = json['livemode'];
     location = json['location'];
+    chargeStatus = json['charge_status'];
     createdAt = json['created_at'];
     used = json['used'];
     card = json['card'] != null ? new Card.fromJson(json['card']) : null;
@@ -34,6 +36,7 @@ class Token {
     data['id'] = this.id;
     data['livemode'] = this.livemode;
     data['location'] = this.location;
+    data['charge_status'] = this.chargeStatus;
     data['created_at'] = this.createdAt;
     data['used'] = this.used;
     if (this.card != null) {

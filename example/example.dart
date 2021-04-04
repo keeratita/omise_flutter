@@ -11,11 +11,7 @@ exampleCreateToken() async {
   final token = await omise.token
       .create("John Doe", "4242424242424242", "12", "2020", "123");
 
-  if (token.card.securityCodeCheck == true) {
-    // Send a token back to your server
-  } else {
-    // Show error: Invalid CVV or the card can't be used
-  }
+  // TODO: You have to send the given token id back to your server.
 }
 
 exampleCreateSource() async {
