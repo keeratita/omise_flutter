@@ -5,7 +5,7 @@ import './src/resources/source.dart';
 import './src/resources/capability.dart';
 import './src/client.dart';
 
-const String _VERSION = "0.1.2";
+const String _VERSION = "0.1.5";
 
 /// OmiseFlutter
 class OmiseFlutter {
@@ -15,15 +15,15 @@ class OmiseFlutter {
   final String publicKey;
 
   // HTTP Client
-  Client _client;
+  late Client _client;
   Client get client {
     return _client;
   }
 
   // Resources
-  TokenResource token;
-  SourceResource source;
-  CapabilityResource capability;
+  late TokenResource token;
+  late SourceResource source;
+  late CapabilityResource capability;
 
   // Constructor
   OmiseFlutter(this.publicKey, [this.apiVersion = '2019-05-29']) {

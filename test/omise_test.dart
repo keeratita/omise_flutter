@@ -5,8 +5,8 @@ import './mock//test_client.dart';
 final String publicKey = "pkey_test_xxxxxxxxxxx";
 
 void main() {
-  TestClient client;
-  OmiseFlutter omise;
+  TestClient? client;
+  OmiseFlutter? omise;
 
   setUp(() {
     // setup mock
@@ -21,15 +21,15 @@ void main() {
 
   group("Initiate instance", () {
     test('Create an instance with publicKey', () {
-      expect(omise.publicKey, publicKey);
-      expect(omise.apiVersion, "2019-05-29");
+      expect(omise!.publicKey, publicKey);
+      expect(omise!.apiVersion, "2019-05-29");
     });
   });
 
   group("Token", () {
     test('Create a token', () async {
-      omise.client.httpClient = client.mockCreateTokenResponse();
-      final response = await omise.token
+      omise!.client.httpClient = client!.mockCreateTokenResponse();
+      final response = await omise!.token
           .create("John Doe", "4242424242424242", "12", "2020", "123");
       expect(response.object, "token");
     });
@@ -37,17 +37,17 @@ void main() {
 
   group("Source", () {
     test('Create a source', () async {
-      omise.client.httpClient = client.mockCreateSourceResponse();
+      omise!.client.httpClient = client!.mockCreateSourceResponse();
       final response =
-          await omise.source.create(10000, "thb", "internet_banking_bay");
+          await omise!.source.create(10000, "thb", "internet_banking_bay");
       expect(response.object, "source");
     });
   });
 
   group("Capability", () {
     test('Retrieve a capability', () async {
-      omise.client.httpClient = client.mockGetCapabilityResponse();
-      final response = await omise.capability.retrieve();
+      omise!.client.httpClient = client!.mockGetCapabilityResponse();
+      final response = await omise!.capability.retrieve();
       expect(response.object, "capability");
     });
   });

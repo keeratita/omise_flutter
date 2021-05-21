@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import './exception.dart';
 
 class Client {
-  final String _publicKey;
-  final String _apiVersion;
-  String version;
+  late final String _publicKey;
+  late final String _apiVersion;
+  late String version;
 
   Client(this._publicKey, this._apiVersion);
 
@@ -60,7 +60,7 @@ class Client {
   Map<String, dynamic> processResponse(http.Response response) {
     final responseStatusCode = response.statusCode;
 
-    Map<String, dynamic> map;
+    Map<String, dynamic>? map;
     try {
       map = jsonDecode(response.body) as Map<String, dynamic>;
     } catch (e) {

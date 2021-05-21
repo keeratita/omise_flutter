@@ -9,13 +9,13 @@ class TokenResource extends Resource {
 
   Future<Token> create(String name, String number, String expirationMonth,
       String expirationYear, String securityCode,
-      {String city,
-      String country,
-      String postalCode,
-      String state,
-      String street1,
-      String street2,
-      String phoneNumber}) async {
+      {String? city,
+      String? country,
+      String? postalCode,
+      String? state,
+      String? street1,
+      String? street2,
+      String? phoneNumber}) async {
     final data = {
       'card': {
         'name': name,
