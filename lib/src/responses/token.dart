@@ -1,14 +1,14 @@
 part of '../responses.dart';
 
 class Token {
-  String object;
-  String id;
-  bool livemode;
-  String location;
-  String chargeStatus;
-  String createdAt;
-  bool used;
-  Card card;
+  String? object;
+  String? id;
+  bool? livemode;
+  String? location;
+  String? chargeStatus;
+  String? createdAt;
+  bool? used;
+  Card? card;
 
   Token(
       {this.object,
@@ -40,7 +40,7 @@ class Token {
     data['created_at'] = this.createdAt;
     data['used'] = this.used;
     if (this.card != null) {
-      data['card'] = this.card.toJson();
+      data['card'] = this.card!.toJson();
     }
     return data;
   }

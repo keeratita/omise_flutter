@@ -8,9 +8,11 @@ OmiseFlutter omise = OmiseFlutter(publicKey);
 exampleCreateToken() async {
   // See Omise API documentation for details
   // https://www.omise.co/tokens-api
+  // ignore: unused_local_variable
   final token = await omise.token
       .create("John Doe", "4242424242424242", "12", "2020", "123");
 
+  // ignore: todo
   // TODO: You have to send the given token id back to your server.
 }
 
