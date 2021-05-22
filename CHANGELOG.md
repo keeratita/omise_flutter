@@ -1,3 +1,7 @@
+## [0.1.5] - Minor update
+
+- Null safety support; Thanks PR from @pitsanujiw
+
 ## [0.1.4] - Minor update
 
 - Update an exmaple
