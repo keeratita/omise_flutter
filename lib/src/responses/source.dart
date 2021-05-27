@@ -1,5 +1,6 @@
 part of '../responses.dart';
 
+/// Source API: please check https://www.omise.co/sources-api
 class Source {
   String? object;
   String? id;

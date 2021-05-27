@@ -7,6 +7,14 @@ class TokenResource extends Resource {
   TokenResource(Client client, String publicKey, String apiVersion)
       : super(client, publicKey, apiVersion);
 
+  /// Create a token
+  ///
+  /// See Omise API documentation for details
+  /// https://www.omise.co/tokens-api#create
+  ///
+  /// ```dart
+  /// final token = await omise.token.create("John Doe", "4242424242424242", "12", "2020", "123");
+  /// ```
   Future<Token> create(String name, String number, String expirationMonth,
       String expirationYear, String securityCode,
       {String? city,
