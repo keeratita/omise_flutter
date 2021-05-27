@@ -2,31 +2,31 @@ part of '../responses.dart';
 
 /// Card API: please check https://www.omise.co/cards-api
 class Card {
-  String object;
-  String id;
-  bool livemode;
+  String? object;
+  String? id;
+  bool? livemode;
   Null location;
-  String createdAt;
-  bool deleted;
-  String street1;
+  String? createdAt;
+  bool? deleted;
+  String? street1;
   Null street2;
-  String city;
+  String? city;
   Null state;
-  String postalCode;
-  String country;
-  String phoneNumber;
-  String financing;
-  String bank;
+  String? postalCode;
+  String? country;
+  String? phoneNumber;
+  String? financing;
+  String? bank;
   Null firstDigits;
-  String lastDigits;
-  String brand;
-  int expirationMonth;
-  int expirationYear;
-  String fingerprint;
-  String name;
+  String? lastDigits;
+  String? brand;
+  int? expirationMonth;
+  int? expirationYear;
+  String? fingerprint;
+  String? name;
   @Deprecated(
       "This attribute is deprecated. Please check https://www.omise.co/cards-api")
-  bool securityCodeCheck;
+  bool? securityCodeCheck;
 
   Card(
       {this.object,
@@ -76,6 +76,7 @@ class Card {
     expirationYear = json['expiration_year'];
     fingerprint = json['fingerprint'];
     name = json['name'];
+    // ignore: deprecated_member_use_from_same_package
     securityCodeCheck = json['security_code_check'];
   }
 
@@ -103,6 +104,7 @@ class Card {
     data['expiration_year'] = this.expirationYear;
     data['fingerprint'] = this.fingerprint;
     data['name'] = this.name;
+    // ignore: deprecated_member_use_from_same_package
     data['security_code_check'] = this.securityCodeCheck;
     return data;
   }

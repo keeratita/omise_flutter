@@ -2,24 +2,24 @@ part of '../responses.dart';
 
 /// Source API: please check https://www.omise.co/sources-api
 class Source {
-  String object;
-  String id;
-  bool livemode;
-  String location;
-  String createdAt;
-  String type;
-  String flow;
-  int amount;
-  String currency;
+  String? object;
+  String? id;
+  bool? livemode;
+  String? location;
+  String? createdAt;
+  String? type;
+  String? flow;
+  int? amount;
+  String? currency;
   Null mobileNumber;
   Null phoneNumber;
   Null references;
   Null name;
   Null email;
-  String barcode;
-  String storeId;
-  String storeName;
-  String terminalId;
+  String? barcode;
+  String? storeId;
+  String? storeName;
+  String? terminalId;
   Null installmentTerm;
   Null zeroInterestInstallments;
   Null scannableCode;

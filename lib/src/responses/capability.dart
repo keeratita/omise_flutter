@@ -2,11 +2,11 @@ part of '../responses.dart';
 
 /// Capability API: please check https://www.omise.co/capability-api
 class Capability {
-  String object;
-  String location;
-  List<String> banks;
-  List<PaymentMethods> paymentMethods;
-  bool zeroInterestInstallments;
+  String? object;
+  String? location;
+  List<String>? banks;
+  List<PaymentMethods>? paymentMethods;
+  bool? zeroInterestInstallments;
 
   Capability(
       {this.object,
@@ -20,9 +20,9 @@ class Capability {
     location = json['location'];
     banks = json['banks'].cast<String>();
     if (json['payment_methods'] != null) {
-      paymentMethods = new List<PaymentMethods>();
+      paymentMethods = <PaymentMethods>[];
       json['payment_methods'].forEach((v) {
-        paymentMethods.add(new PaymentMethods.fromJson(v));
+        paymentMethods!.add(new PaymentMethods.fromJson(v));
       });
     }
     zeroInterestInstallments = json['zero_interest_installments'];
@@ -35,7 +35,7 @@ class Capability {
     data['banks'] = this.banks;
     if (this.paymentMethods != null) {
       data['payment_methods'] =
-          this.paymentMethods.map((v) => v.toJson()).toList();
+          this.paymentMethods!.map((v) => v.toJson()).toList();
     }
     data['zero_interest_installments'] = this.zeroInterestInstallments;
     return data;

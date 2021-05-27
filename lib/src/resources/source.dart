@@ -16,15 +16,15 @@ class SourceResource extends Resource {
   /// final source = await omise.source.create(10000, "thb", "internet_banking_bay");
   /// ```
   Future<Source> create(int amount, String currency, String type,
-      {String barcode,
-      String email,
-      int installmentTerm,
-      String name,
-      String storeId,
-      String storeName,
-      String terminalId,
-      String phoneNumber,
-      bool zeroInterestInstallments}) async {
+      {String? barcode,
+      String? email,
+      int? installmentTerm,
+      String? name,
+      String? storeId,
+      String? storeName,
+      String? terminalId,
+      String? phoneNumber,
+      bool? zeroInterestInstallments}) async {
     final data = {
       'amount': amount,
       'currency': currency,
