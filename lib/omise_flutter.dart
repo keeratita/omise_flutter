@@ -5,9 +5,13 @@ import './src/resources/source.dart';
 import './src/resources/capability.dart';
 import './src/client.dart';
 
-const String _VERSION = "0.1.2";
+const String _VERSION = "0.1.4";
 
 /// OmiseFlutter
+///
+/// ```dart
+/// OmiseFlutter omise = OmiseFlutter(publicKey);
+/// ```
 class OmiseFlutter {
   // Omise API version
   final String apiVersion;
