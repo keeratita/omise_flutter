@@ -1,5 +1,6 @@
 part of '../responses.dart';
 
+/// Capability API: please check https://www.omise.co/capability-api
 class Capability {
   String object;
   String location;

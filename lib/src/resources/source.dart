@@ -7,6 +7,14 @@ class SourceResource extends Resource {
   SourceResource(Client client, String publicKey, String apiVersion)
       : super(client, publicKey, apiVersion);
 
+  /// Create a source
+  ///
+  /// See Omise API documentation for details
+  /// https://www.omise.co/sources-api#create
+  ///
+  /// ```dart
+  /// final source = await omise.source.create(10000, "thb", "internet_banking_bay");
+  /// ```
   Future<Source> create(int amount, String currency, String type,
       {String barcode,
       String email,

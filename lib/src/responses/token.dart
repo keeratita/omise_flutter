@@ -1,5 +1,6 @@
 part of '../responses.dart';
 
+/// Token API: please check https://www.omise.co/tokens-api
 class Token {
   String object;
   String id;

@@ -7,6 +7,7 @@ class CapabilityResource extends Resource {
   CapabilityResource(Client client, String publicKey, String apiVersion)
       : super(client, publicKey, apiVersion);
 
+  /// Retrieve a capability of your account
   Future<Capability> retrieve() async {
     final response = await client.get(host, ['capability']);
     return Capability.fromJson(response);

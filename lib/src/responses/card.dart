@@ -1,5 +1,6 @@
 part of '../responses.dart';
 
+/// Card API: please check https://www.omise.co/cards-api
 class Card {
   String object;
   String id;
