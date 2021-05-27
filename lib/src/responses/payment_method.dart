@@ -1,9 +1,9 @@
 class PaymentMethods {
-  String object;
-  String name;
-  List<String> currencies;
-  List<String> cardBrands;
-  List<int> installmentTerms;
+  String? object;
+  String? name;
+  List<String>? currencies;
+  List<String>? cardBrands;
+  List<int>? installmentTerms;
 
   PaymentMethods(
       {this.object,
