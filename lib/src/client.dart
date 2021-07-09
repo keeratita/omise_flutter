@@ -12,7 +12,7 @@ class Client {
 
   http.Client httpClient = new http.Client();
 
-  // Makes a post request
+  /// Makes a post request to [host] by following [path] with [data]
   Future<Map<String, dynamic>> post(String host, final List<String> path,
       {final dynamic data}) async {
     final uri = createUri(host, path);
@@ -25,7 +25,7 @@ class Client {
     return processResponse(response);
   }
 
-  // Makes a get request
+  /// Makes a get request from [host] by following [path]
   Future<Map<String, dynamic>> get(String host, final List<String> path) async {
     final uri = createUri(host, path);
     final headers = createHeader();
@@ -37,15 +37,18 @@ class Client {
     return processResponse(response);
   }
 
+  /// Create a Uri from [host] and [path]
   Uri createUri(String host, List<String> path) {
     final uri = Uri(scheme: 'https', host: host, pathSegments: path);
     return uri;
   }
 
+  /// Build a basic authentication header
   String basicAuth() {
     return 'Basic ' + base64Encode(utf8.encode('$_publicKey:'));
   }
 
+  /// Create a header
   Map<String, String> createHeader() {
     final headers = <String, String>{
       'Authorization': this.basicAuth(),
@@ -57,6 +60,7 @@ class Client {
     return headers;
   }
 
+  /// Deserialize JSON from [response]
   Map<String, dynamic> processResponse(http.Response response) {
     final responseStatusCode = response.statusCode;
 

@@ -8,6 +8,10 @@ import './src/client.dart';
 const String _VERSION = "0.1.6";
 
 /// OmiseFlutter
+///
+/// ```dart
+/// OmiseFlutter omise = OmiseFlutter(publicKey);
+/// ```
 class OmiseFlutter {
   // Omise API version
   final String apiVersion;
