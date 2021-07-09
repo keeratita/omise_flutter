@@ -10,18 +10,18 @@ class Source {
   String? flow;
   int? amount;
   String? currency;
-  Null mobileNumber;
-  Null phoneNumber;
-  Null references;
-  Null name;
-  Null email;
+  String? mobileNumber;
+  String? phoneNumber;
+  String? references;
+  String? name;
+  String? email;
   String? barcode;
   String? storeId;
   String? storeName;
   String? terminalId;
-  Null installmentTerm;
-  Null zeroInterestInstallments;
-  Null scannableCode;
+  String? installmentTerm;
+  String? zeroInterestInstallments;
+  String? scannableCode;
 
   Source(
       {this.object,

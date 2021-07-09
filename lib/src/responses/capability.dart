@@ -1,11 +1,11 @@
 part of '../responses.dart';
 
 class Capability {
-   String? object;
-   String? location;
-   List<String>? banks;
-   List<PaymentMethods>? paymentMethods;
-   bool? zeroInterestInstallments;
+  String? object;
+  String? location;
+  List<String>? banks;
+  List<PaymentMethods>? paymentMethods;
+  bool? zeroInterestInstallments;
 
   Capability(
       {this.object,
