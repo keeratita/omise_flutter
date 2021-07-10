@@ -1,3 +1,7 @@
+## [0.1.6] - Bug fixes
+
+- Bug fixes
+
 ## [0.1.5] - Minor update
 
 - Null safety support; Thanks PR from @pitsanujiw

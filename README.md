@@ -10,7 +10,7 @@ More information: https://pub.dev/packages/omise_flutter
 
 ```
 dependencies:
-  omise_flutter: ^0.1.5
+  omise_flutter: ^0.1.6
 ```
 
 2. Install it from the command
