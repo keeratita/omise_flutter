@@ -24,6 +24,7 @@ class SourceResource extends Resource {
       String? storeName,
       String? terminalId,
       String? phoneNumber,
+      String? platformType,
       bool? zeroInterestInstallments}) async {
     final data = {
       'amount': amount,
@@ -37,7 +38,8 @@ class SourceResource extends Resource {
       'store_id': storeId,
       'store_name': storeName,
       'terminal_id': terminalId,
-      'zero_interest_installments': zeroInterestInstallments
+      'zero_interest_installments': zeroInterestInstallments,
+      'platform_type': platformType
     };
 
     final response = await client.post(host, ['sources'], data: data);

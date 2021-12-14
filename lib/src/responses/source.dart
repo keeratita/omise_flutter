@@ -23,6 +23,7 @@ class Source {
   String? installmentTerm;
   String? zeroInterestInstallments;
   String? scannableCode;
+  String? platformType;
 
   Source(
       {this.object,
@@ -35,6 +36,7 @@ class Source {
       this.amount,
       this.currency,
       this.mobileNumber,
+      this.platformType,
       this.phoneNumber,
       this.references,
       this.name,
@@ -58,6 +60,7 @@ class Source {
     amount = json['amount'];
     currency = json['currency'];
     mobileNumber = json['mobile_number'];
+    platformType = json['platform_type'];
     phoneNumber = json['phone_number'];
     references = json['references'];
     name = json['name'];
@@ -83,6 +86,7 @@ class Source {
     data['amount'] = this.amount;
     data['currency'] = this.currency;
     data['mobile_number'] = this.mobileNumber;
+    data['platform_type'] = this.platformType;
     data['phone_number'] = this.phoneNumber;
     data['references'] = this.references;
     data['name'] = this.name;
